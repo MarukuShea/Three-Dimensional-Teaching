@@ -1,113 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Geometry Lessons</title>
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
-        onload="renderMathInElement(document.body, {
-            delimiters: [
-                {left: '$$', right: '$$', display: true},
-                {left: '$', right: '$', display: false}
-            ]
-        });"></script>
+<main class="max-w-5xl mx-auto py-16 px-6 space-y-20">
 
-    <style>
-        .section-card { transition: all 0.3s ease; }
-        .section-card:hover { transform: translateY(-2px); box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); }
-        img { border-radius: 12px; background: white; padding: 10px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); max-height: 350px; }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+    <section class="bg-white p-8 rounded-3xl shadow-md border border-gray-100">
+        <h2 class="text-3xl font-bold text-blue-800 mb-6">1. Angle Between a Line and a Plane</h2>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <p class="text-lg">The angle between a line $L$ and a plane $\alpha$ is the angle $\theta$ between the line and its orthogonal projection $L'$ onto the plane.</p>
+            <img src="https://raw.githubusercontent.com/manas-p-m/3D-Geometry-Visualizations/main/AngleLinePlane.png" 
+                 alt="Line and Plane Angle" class="mx-auto rounded-lg shadow w-full max-w-sm">
+        </div>
+        
+    </section>
 
-    <header class="bg-gradient-to-r from-blue-800 to-indigo-900 text-white py-16 px-6 text-center shadow-lg">
-        <h1 class="text-5xl font-extrabold tracking-tight">3D Geometry Masterclass</h1>
-        <p class="mt-4 text-blue-100 text-xl max-w-2xl mx-auto font-light">
-            Mastering the relationships between lines and planes through visualization.
-        </p>
-    </header>
+    <section class="bg-white p-8 rounded-3xl shadow-md border border-gray-100">
+        <h2 class="text-3xl font-bold text-blue-800 mb-6">2. Angle Between Two Planes</h2>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <img src="https://raw.githubusercontent.com/manas-p-m/3D-Geometry-Visualizations/main/DihedralAngle.png" 
+                 alt="Dihedral Angle" class="mx-auto rounded-lg shadow w-full max-w-sm">
+            <p class="text-lg">The dihedral angle is measured by two lines (one in each plane) that are both perpendicular to the intersection line.</p>
+        </div>
+        
+    </section>
 
-    <main class="max-w-5xl mx-auto py-16 px-6 space-y-20">
-
-        <section class="section-card bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h2 class="text-3xl font-bold text-blue-800 mb-6">1. Angle Between a Line and a Plane</h2>
-                    <p class="text-lg leading-relaxed text-gray-600 mb-6">
-                        The angle between a line $L$ and a plane $\alpha$ is defined as the angle $\theta$ between the line $L$ and its <strong>orthogonal projection</strong> $L'$ onto the plane.
-                    </p>
-                    <div class="bg-blue-50 p-6 rounded-2xl border-l-8 border-blue-500">
-                        <p class="text-sm font-bold text-blue-600 uppercase mb-2">Calculation</p>
-                        <p class="text-gray-700 italic">Using direction vector $\vec{d}$ and normal vector $\vec{n}$:</p>
-                        <div class="mt-2 text-2xl">
-                            $$\sin(\theta) = \frac{|\vec{n} \cdot \vec{d}|}{|\vec{n}| |\vec{d}|}$$
-                        </div>
-                    </div>
-                </div>
-                <div class="flex flex-col items-center">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/11523765045578596876_0" alt="Line and Plane Angle Diagram" class="w-full">
-                    <p class="mt-4 text-sm text-gray-400 italic font-medium">Visualization of projection $L'$</p>
-                </div>
+    <section class="bg-white p-8 rounded-3xl shadow-md border border-gray-100">
+        <h2 class="text-3xl font-bold text-blue-800 mb-6">3. Theorem of Three Perpendiculars</h2>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+                <p class="text-lg">If $PO \perp \alpha$ and $OA \perp l$, then $PA \perp l$.</p>
+                <ul class="list-disc pl-5 space-y-2 text-blue-700 font-bold">
+                    <li>Line 1: Vertical</li>
+                    <li>Line 2: On the plane</li>
+                    <li>Line 3: Connecting them</li>
+                </ul>
             </div>
-        </section>
+            <img src="https://raw.githubusercontent.com/manas-p-m/3D-Geometry-Visualizations/main/ThreePerp.png" 
+                 alt="Theorem of 3 Perpendiculars" class="mx-auto rounded-lg shadow w-full max-w-sm">
+        </div>
+        
+    </section>
 
-        <section class="section-card bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div class="order-2 lg:order-1 flex flex-col items-center">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f1/Angle_between_line_and_plane.svg" 
-     onerror="this.src='https://placehold.co/400x300?text=Angle+Between+Line+and+Plane'"
-     alt="Angle between line and plane" 
-     class="mx-auto my-4 rounded shadow-md w-full max-w-sm bg-white p-2">
-                    <p class="mt-4 text-sm text-gray-400 italic font-medium">The Dihedral Angle between planes</p>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <h2 class="text-3xl font-bold text-blue-800 mb-6">2. Angle Between Two Planes</h2>
-                    <p class="text-lg leading-relaxed text-gray-600 mb-6">
-                        The angle between two intersecting planes (the <strong>dihedral angle</strong>) is found by drawing two lines from a point on the intersection line—one in each plane—perpendicular to the intersection.
-                    </p>
-                    <p class="text-gray-500 bg-gray-50 p-4 rounded-xl border-dashed border-2 border-gray-200">
-                        <strong>Pro Tip:</strong> It's the same as the angle between the two normal vectors of the planes.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-card bg-white p-10 rounded-3xl border border-gray-100 shadow-sm">
-            <h2 class="text-3xl font-bold text-blue-800 mb-8">3. Theorem of Three Perpendiculars</h2>
-            <div class="bg-indigo-900 text-white rounded-3xl p-10 flex flex-col lg:flex-row gap-12 items-center">
-                <div class="flex-1 space-y-6">
-                    <p class="text-xl font-light leading-relaxed">
-                        A fundamental tool for 3D construction and proofs:
-                    </p>
-                    <ul class="space-y-4">
-                        <li class="flex items-start bg-blue-800 bg-opacity-40 p-4 rounded-xl">
-                            <span class="font-bold text-blue-300 mr-3">STEP 1:</span> $PO \perp \text{plane } \alpha$
-                        </li>
-                        <li class="flex items-start bg-blue-800 bg-opacity-40 p-4 rounded-xl">
-                            <span class="font-bold text-blue-300 mr-3">STEP 2:</span> $OA \perp \text{line } l \text{ (in } \alpha\text{)}$
-                        </li>
-                        <li class="flex items-start bg-indigo-500 p-4 rounded-xl shadow-lg border border-indigo-400 font-bold">
-                            <span class="mr-3">RESULT:</span> $PA \perp \text{line } l$
-                        </li>
-                    </ul>
-                </div>
-                <div class="flex-1">
-                    <img src="http://googleusercontent.com/image_collection/image_retrieval/10891064988507315608_0" alt="Three Perpendiculars Diagram" class="w-full">
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-gray-900 text-gray-500 py-16 text-center border-t border-gray-800">
-        <p class="text-sm tracking-widest uppercase font-bold text-gray-400 mb-2">Geometry Education Project</p>
-        <p>Built with GitHub Codespaces & GitHub Pages</p>
-    </footer>
-
-</body>
-</html>
+</main>
